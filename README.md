@@ -73,14 +73,15 @@ The main agent function is decorated with `@server.agent()` and implements:
 - **Name**: `hello-world-agent`
 - **Description**: A friendly Hello World agent that greets users and echoes their messages
 - **Input**: List of A2A Messages
-- **Output**: Async generator yielding AgentMessage or string responses
+- **Output**: Async generator yielding Message objects or string responses
 
 ### Key Features
 
 - Uses `get_message_text()` to extract text from A2A Messages
-- Demonstrates both string and AgentMessage response types
+- Demonstrates both string and Message response types
 - Includes async operations with `asyncio.sleep()`
 - Follows BeeAI Hello World tutorial structure
+- Proper ACP SDK usage with `Message` and `MessagePart`
 
 ## Development
 
@@ -94,6 +95,33 @@ uv sync
 uv run python -m beeai_agents.agent
 ```
 
+### Testing with curl
+
+You can also test the agent directly with HTTP requests:
+
+```bash
+# Check if the agent is available
+curl http://localhost:8000/agents
+
+# Send a message to the agent
+curl -X POST http://localhost:8000/runs \
+  -H "Content-Type: application/json" \
+  -d '{
+    "agent_name": "hello-world-agent",
+    "input": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "content": "Hello, world!",
+            "content_type": "text/plain"
+          }
+        ]
+      }
+    ]
+  }'
+```
+
 ### Docker Support
 
 ```bash
@@ -102,6 +130,32 @@ docker build -t beeai-test-agent .
 
 # Run the container
 docker run -p 8000:8000 beeai-test-agent
+```
+
+## Troubleshooting
+
+### Import Errors
+
+If you encounter import errors like `cannot import name 'AgentMessage'`, this usually means:
+
+1. **Outdated dependencies**: Run `uv sync` to update dependencies
+2. **Wrong import pattern**: The current ACP SDK uses `Message` and `MessagePart`, not `AgentMessage`
+
+### Common Issues
+
+- **Server not starting**: Make sure port 8000 is available
+- **Agent not found**: Verify the server is running and the agent name matches
+- **Python version**: Ensure you're using Python 3.11 or higher
+
+### Correct Import Pattern
+
+```python
+# ✅ Correct imports
+from acp_sdk.models import Message, MessagePart
+from acp_sdk.server import Context, Server, RunYield, RunYieldResume
+
+# ❌ Incorrect imports (will cause errors)
+from acp_sdk.models.models import AgentMessage  # This doesn't exist
 ```
 
 ## Next Steps
@@ -122,6 +176,7 @@ Now that you have a working Hello World agent, you can:
 - [BeeAI Hello World Tutorial](https://docs.beeai.dev/build-agents/hello-world)
 - [BeeAI Platform Agent Starter](https://github.com/i-am-bee/beeai-platform-agent-starter)
 - [Agent Communication Protocol](https://agentcommunicationprotocol.dev/)
+- [ACP SDK Documentation](https://agentcommunicationprotocol.dev/introduction/quickstart)
 
 ## License
 

@@ -6,9 +6,8 @@ This agent follows the BeeAI Hello World tutorial implementation.
 
 import asyncio
 from collections.abc import AsyncGenerator
-from acp_sdk.models import Message
-from acp_sdk.models.models import AgentMessage
-from acp_sdk.server import Context, Server
+from acp_sdk.models import Message, MessagePart
+from acp_sdk.server import Context, Server, RunYield, RunYieldResume
 from acp_sdk.utils.message_utils import get_message_text
 
 # Create server instance
@@ -21,7 +20,7 @@ server = Server()
 )
 async def hello_world_agent(
     input: list[Message], context: Context
-) -> AsyncGenerator[AgentMessage | str, None]:
+) -> AsyncGenerator[RunYield, RunYieldResume]:
     """
     A simple Hello World agent implementation.
     
@@ -30,20 +29,24 @@ async def hello_world_agent(
         context: Context object with run details (task_id, context_id, etc.)
     
     Yields:
-        AgentMessage or str responses
+        Message objects or string responses
     """
     # Extract text from the message
     user_message = get_message_text(input)
     
-    # Yield a greeting
+    # Yield a simple string response first
     yield f"Hello! You said: '{user_message}'"
     
     # Add a small delay for demonstration
     await asyncio.sleep(0.5)
     
-    # Yield a more detailed response
-    yield AgentMessage(
-        content=f"Welcome to BeeAI! I'm your Hello World agent. I received your message and I'm ready to help. Your message was: {user_message}"
+    # Yield a more detailed response as a Message object
+    yield Message(
+        role="agent",
+        parts=[MessagePart(
+            content=f"Welcome to BeeAI! I'm your Hello World agent. I received your message and I'm ready to help. Your message was: {user_message}",
+            content_type="text/plain"
+        )]
     )
 
 

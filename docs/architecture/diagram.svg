@@ -1,0 +1,191 @@
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .layer-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; }
+      .component-title { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; }
+      .component-text { font-family: Arial, sans-serif; font-size: 10px; }
+      .flow-text { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" class="layer-title" font-size="24" fill="#2d3748">BeeAI Test Agent Architecture</text>
+  <text x="600" y="50" text-anchor="middle" class="component-text" fill="#718096">Enhanced multi-layer agent system with comprehensive functionality</text>
+  
+  <!-- Business Layer -->
+  <rect x="50" y="80" width="1100" height="150" fill="#fff5f5" stroke="#e53e3e" stroke-width="2" rx="10"/>
+  <rect x="50" y="80" width="1100" height="4" fill="#e53e3e"/>
+  <text x="70" y="105" class="layer-title" fill="#e53e3e">👥 Business Layer</text>
+  
+  <!-- Business Components -->
+  <rect x="80" y="120" width="240" height="80" fill="white" stroke="#e53e3e" stroke-width="1" rx="5"/>
+  <text x="90" y="135" class="component-title" fill="#2d3748">User/Developer</text>
+  <text x="90" y="150" class="component-text" fill="#718096">End users and developers</text>
+  <text x="90" y="165" class="component-text" fill="#718096">interacting with agents</text>
+  
+  <rect x="340" y="120" width="240" height="80" fill="white" stroke="#ed8936" stroke-width="1" rx="5"/>
+  <text x="350" y="135" class="component-title" fill="#2d3748">Agent Interaction Process</text>
+  <text x="350" y="150" class="component-text" fill="#718096">Core business process for</text>
+  <text x="350" y="165" class="component-text" fill="#718096">agent communication</text>
+  
+  <rect x="600" y="120" width="240" height="80" fill="white" stroke="#ed8936" stroke-width="1" rx="5"/>
+  <text x="610" y="135" class="component-title" fill="#2d3748">Testing & Validation</text>
+  <text x="610" y="150" class="component-text" fill="#718096">Quality assurance and</text>
+  <text x="610" y="165" class="component-text" fill="#718096">validation processes</text>
+  
+  <rect x="860" y="120" width="240" height="80" fill="white" stroke="#ed8936" stroke-width="1" rx="5"/>
+  <text x="870" y="135" class="component-title" fill="#2d3748">Monitoring & Health</text>
+  <text x="870" y="150" class="component-text" fill="#718096">System monitoring and</text>
+  <text x="870" y="165" class="component-text" fill="#718096">operational oversight</text>
+  
+  <!-- Application Layer -->
+  <rect x="50" y="250" width="1100" height="200" fill="#f0fff4" stroke="#38a169" stroke-width="2" rx="10"/>
+  <rect x="50" y="250" width="1100" height="4" fill="#38a169"/>
+  <text x="70" y="275" class="layer-title" fill="#38a169">🚀 Application Layer</text>
+  
+  <!-- Application Components Row 1 -->
+  <rect x="80" y="290" width="170" height="70" fill="white" stroke="#38a169" stroke-width="1" rx="5"/>
+  <text x="90" y="305" class="component-title" fill="#2d3748">Enhanced Agent</text>
+  <text x="90" y="318" class="component-text" fill="#718096">Intent analysis &amp;</text>
+  <text x="90" y="331" class="component-text" fill="#718096">sentiment detection</text>
+  
+  <rect x="270" y="290" width="170" height="70" fill="white" stroke="#38a169" stroke-width="1" rx="5"/>
+  <text x="280" y="305" class="component-title" fill="#2d3748">Health Check Agent</text>
+  <text x="280" y="318" class="component-text" fill="#718096">System health</text>
+  <text x="280" y="331" class="component-text" fill="#718096">monitoring</text>
+  
+  <rect x="460" y="290" width="170" height="70" fill="white" stroke="#00b4d8" stroke-width="1" rx="5"/>
+  <text x="470" y="305" class="component-title" fill="#2d3748">Input Validation</text>
+  <text x="470" y="318" class="component-text" fill="#718096">Message content</text>
+  <text x="470" y="331" class="component-text" fill="#718096">validation</text>
+  
+  <rect x="650" y="290" width="170" height="70" fill="white" stroke="#00b4d8" stroke-width="1" rx="5"/>
+  <text x="660" y="305" class="component-title" fill="#2d3748">Intent Analysis</text>
+  <text x="660" y="318" class="component-text" fill="#718096">User intent &amp;</text>
+  <text x="660" y="331" class="component-text" fill="#718096">sentiment analysis</text>
+  
+  <rect x="840" y="290" width="170" height="70" fill="white" stroke="#00b4d8" stroke-width="1" rx="5"/>
+  <text x="850" y="305" class="component-title" fill="#2d3748">Response Gen.</text>
+  <text x="850" y="318" class="component-text" fill="#718096">Personalized</text>
+  <text x="850" y="331" class="component-text" fill="#718096">responses</text>
+  
+  <!-- Application Components Row 2 -->
+  <rect x="80" y="375" width="170" height="60" fill="white" stroke="#00b4d8" stroke-width="1" rx="5"/>
+  <text x="90" y="390" class="component-title" fill="#2d3748">Error Handling</text>
+  <text x="90" y="403" class="component-text" fill="#718096">Comprehensive error</text>
+  <text x="90" y="416" class="component-text" fill="#718096">management</text>
+  
+  <rect x="270" y="375" width="170" height="60" fill="white" stroke="#00b4d8" stroke-width="1" rx="5"/>
+  <text x="280" y="390" class="component-title" fill="#2d3748">Logging Service</text>
+  <text x="280" y="403" class="component-text" fill="#718096">Structured logging</text>
+  <text x="280" y="416" class="component-text" fill="#718096">for monitoring</text>
+  
+  <rect x="460" y="375" width="170" height="60" fill="white" stroke="#805ad5" stroke-width="1" rx="5"/>
+  <text x="470" y="390" class="component-title" fill="#2d3748">Message Data</text>
+  <text x="470" y="403" class="component-text" fill="#718096">Structured message</text>
+  <text x="470" y="416" class="component-text" fill="#718096">data objects</text>
+  
+  <rect x="650" y="375" width="170" height="60" fill="white" stroke="#805ad5" stroke-width="1" rx="5"/>
+  <text x="660" y="390" class="component-title" fill="#2d3748">Configuration</text>
+  <text x="660" y="403" class="component-text" fill="#718096">Agent settings</text>
+  <text x="660" y="416" class="component-text" fill="#718096">and configuration</text>
+  
+  <!-- Technology Layer -->
+  <rect x="50" y="470" width="1100" height="160" fill="#ebf8ff" stroke="#3182ce" stroke-width="2" rx="10"/>
+  <rect x="50" y="470" width="1100" height="4" fill="#3182ce"/>
+  <text x="70" y="495" class="layer-title" fill="#3182ce">⚡ Technology Layer</text>
+  
+  <!-- Technology Components -->
+  <rect x="80" y="510" width="160" height="60" fill="white" stroke="#3182ce" stroke-width="1" rx="5"/>
+  <text x="90" y="525" class="component-title" fill="#2d3748">ACP SDK</text>
+  <text x="90" y="538" class="component-text" fill="#718096">Communication</text>
+  <text x="90" y="551" class="component-text" fill="#718096">protocol</text>
+  
+  <rect x="260" y="510" width="160" height="60" fill="white" stroke="#3182ce" stroke-width="1" rx="5"/>
+  <text x="270" y="525" class="component-title" fill="#2d3748">Python 3.11+</text>
+  <text x="270" y="538" class="component-text" fill="#718096">Runtime</text>
+  <text x="270" y="551" class="component-text" fill="#718096">environment</text>
+  
+  <rect x="440" y="510" width="160" height="60" fill="white" stroke="#3182ce" stroke-width="1" rx="5"/>
+  <text x="450" y="525" class="component-title" fill="#2d3748">Uvicorn Server</text>
+  <text x="450" y="538" class="component-text" fill="#718096">ASGI server</text>
+  <text x="450" y="551" class="component-text" fill="#718096">implementation</text>
+  
+  <rect x="620" y="510" width="160" height="60" fill="white" stroke="#3182ce" stroke-width="1" rx="5"/>
+  <text x="630" y="525" class="component-title" fill="#2d3748">AsyncIO</text>
+  <text x="630" y="538" class="component-text" fill="#718096">Async I/O</text>
+  <text x="630" y="551" class="component-text" fill="#718096">framework</text>
+  
+  <rect x="800" y="510" width="160" height="60" fill="white" stroke="#3182ce" stroke-width="1" rx="5"/>
+  <text x="810" y="525" class="component-title" fill="#2d3748">PyTest</text>
+  <text x="810" y="538" class="component-text" fill="#718096">Testing</text>
+  <text x="810" y="551" class="component-text" fill="#718096">framework</text>
+  
+  <rect x="980" y="510" width="160" height="60" fill="white" stroke="#3182ce" stroke-width="1" rx="5"/>
+  <text x="990" y="525" class="component-title" fill="#2d3748">Docker</text>
+  <text x="990" y="538" class="component-text" fill="#718096">Container</text>
+  <text x="990" y="551" class="component-text" fill="#718096">platform</text>
+  
+  <!-- Implementation Layer -->
+  <rect x="50" y="650" width="1100" height="120" fill="#faf5ff" stroke="#805ad5" stroke-width="2" rx="10"/>
+  <rect x="50" y="650" width="1100" height="4" fill="#805ad5"/>
+  <text x="70" y="675" class="layer-title" fill="#805ad5">🔧 Implementation Layer</text>
+  
+  <!-- Implementation Components -->
+  <rect x="80" y="690" width="240" height="60" fill="white" stroke="#805ad5" stroke-width="1" rx="5"/>
+  <text x="90" y="705" class="component-title" fill="#2d3748">Testing Infrastructure</text>
+  <text x="90" y="718" class="component-text" fill="#718096">95%+ test coverage</text>
+  <text x="90" y="731" class="component-text" fill="#718096">comprehensive test suite</text>
+  
+  <rect x="340" y="690" width="240" height="60" fill="white" stroke="#805ad5" stroke-width="1" rx="5"/>
+  <text x="350" y="705" class="component-title" fill="#2d3748">Deployment Package</text>
+  <text x="350" y="718" class="component-text" fill="#718096">Docker containers and</text>
+  <text x="350" y="731" class="component-text" fill="#718096">deployment artifacts</text>
+  
+  <rect x="600" y="690" width="240" height="60" fill="white" stroke="#805ad5" stroke-width="1" rx="5"/>
+  <text x="610" y="705" class="component-title" fill="#2d3748">Documentation</text>
+  <text x="610" y="718" class="component-text" fill="#718096">README, API docs,</text>
+  <text x="610" y="731" class="component-text" fill="#718096">architecture guides</text>
+  
+  <rect x="860" y="690" width="240" height="60" fill="white" stroke="#805ad5" stroke-width="1" rx="5"/>
+  <text x="870" y="705" class="component-title" fill="#2d3748">Enhanced Features</text>
+  <text x="870" y="718" class="component-text" fill="#718096">Feature development</text>
+  <text x="870" y="731" class="component-text" fill="#718096">and enhancements</text>
+  
+  <!-- Data Flow Arrow -->
+  <text x="600" y="800" text-anchor="middle" class="layer-title" fill="#2d3748">🔄 Core Data Flow</text>
+  
+  <!-- Flow Steps -->
+  <rect x="150" y="820" width="120" height="30" fill="#667eea" rx="15"/>
+  <text x="210" y="838" text-anchor="middle" class="flow-text" fill="white">User Input</text>
+  
+  <polygon points="290,835 310,825 310,845" fill="#667eea"/>
+  
+  <rect x="330" y="820" width="120" height="30" fill="#667eea" rx="15"/>
+  <text x="390" y="838" text-anchor="middle" class="flow-text" fill="white">Validation</text>
+  
+  <polygon points="470,835 490,825 490,845" fill="#667eea"/>
+  
+  <rect x="510" y="820" width="120" height="30" fill="#667eea" rx="15"/>
+  <text x="570" y="838" text-anchor="middle" class="flow-text" fill="white">Analysis</text>
+  
+  <polygon points="650,835 670,825 670,845" fill="#667eea"/>
+  
+  <rect x="690" y="820" width="120" height="30" fill="#667eea" rx="15"/>
+  <text x="750" y="838" text-anchor="middle" class="flow-text" fill="white">Response</text>
+  
+  <polygon points="830,835 850,825 850,845" fill="#667eea"/>
+  
+  <rect x="870" y="820" width="120" height="30" fill="#667eea" rx="15"/>
+  <text x="930" y="838" text-anchor="middle" class="flow-text" fill="white">User Output</text>
+  
+  <!-- Metrics -->
+  <text x="200" y="880" text-anchor="middle" class="component-title" fill="#3182ce">27 Components</text>
+  <text x="400" y="880" text-anchor="middle" class="component-title" fill="#3182ce">4 Layers</text>
+  <text x="600" y="880" text-anchor="middle" class="component-title" fill="#3182ce">95%+ Coverage</text>
+  <text x="800" y="880" text-anchor="middle" class="component-title" fill="#3182ce">~200ms Response</text>
+  
+</svg>

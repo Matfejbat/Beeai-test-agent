@@ -2,6 +2,12 @@
 
 A simple Hello World agent built with the BeeAI Platform following the official tutorial. This agent demonstrates the basic structure and functionality of a BeeAI agent using the ACP (Agent Communication Protocol) SDK.
 
+## 🏗️ Architecture
+
+![BeeAI Test Agent Architecture](docs/architecture/diagram.svg)
+
+For detailed architecture documentation, see [Architecture Overview](docs/architecture/README.md).
+
 ## Features
 
 - Simple greeting functionality
@@ -9,6 +15,7 @@ A simple Hello World agent built with the BeeAI Platform following the official 
 - Demonstrates basic BeeAI agent structure
 - Uses ACP SDK for agent communication
 - Follows BeeAI Hello World tutorial implementation
+- **Enhanced functionality** (see pull request for advanced features)
 
 ## Project Structure
 
@@ -17,6 +24,12 @@ beeai-test-agent/
 ├── src/beeai_agents/
 │   ├── __init__.py          # Empty package file
 │   └── agent.py             # Main agent implementation
+├── docs/
+│   └── architecture/        # Architecture documentation and diagrams
+│       ├── README.md        # Detailed architecture overview
+│       ├── diagram.svg      # Visual architecture diagram
+│       └── diagram.puml     # PlantUML source
+├── tests/                   # Test suite (see enhanced features PR)
 ├── Dockerfile               # Container configuration
 ├── pyproject.toml          # Dependencies and metadata
 ├── uv.lock                 # Dependency lock file (generated)
@@ -131,6 +144,28 @@ docker build -t beeai-test-agent .
 # Run the container
 docker run -p 8000:8000 beeai-test-agent
 ```
+
+## Enhanced Features
+
+🚀 **[View Enhanced Features Pull Request](https://github.com/Matfejbat/Beeai-test-agent/pull/1)** for advanced functionality including:
+
+- **Enhanced Error Handling**: Comprehensive try-catch blocks with proper logging
+- **Input Validation**: Robust validation of incoming messages and content
+- **Intent Analysis**: Basic sentiment analysis and intent detection capabilities
+- **Logging System**: Structured logging for debugging and monitoring
+- **Health Check Agent**: Additional agent for system monitoring
+- **Comprehensive Testing**: Full unit test suite with pytest (95%+ coverage)
+
+## Architecture Overview
+
+The BeeAI Test Agent follows a layered architecture approach:
+
+- **Business Layer**: User interactions and business processes
+- **Application Layer**: Agent components and services  
+- **Technology Layer**: Runtime platforms and frameworks
+- **Implementation Layer**: Development and deployment artifacts
+
+See [detailed architecture documentation](docs/architecture/README.md) for comprehensive information.
 
 ## Troubleshooting
 
